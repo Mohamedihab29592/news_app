@@ -13,6 +13,7 @@ class NewsGetBusinessErrorState extends NewsStates{
 
 class NewsGetSportsLoadingState extends NewsStates{}
 class NewsGeSportsSuccessState extends NewsStates{}
+
 class NewsGetSportsErrorState extends NewsStates{
 
   late final String error;
@@ -35,6 +36,6 @@ class NewsGetSearchErrorState extends NewsStates{
   NewsGetSearchErrorState(this.error);
 }
 
-
+class NewsSelectBusinessItemState extends NewsStates{}
 
 

@@ -36,6 +36,8 @@ dependencies:
   shared_preferences: ^2.0.8
   webview_flutter: ^3.0.2
   conditional_builder_null_safety: ^0.0.6
+  desktop_window: ^0.4.0
+  responsive_builder: ^0.4.2
 
 
 

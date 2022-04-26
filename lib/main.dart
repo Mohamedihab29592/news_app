@@ -1,7 +1,11 @@
 
 
 
+
+import 'dart:io';
+
 import 'package:bot_toast/bot_toast.dart';
+import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new1/shared/cubit/cubit.dart';
@@ -21,6 +25,10 @@ void main() async
 {// be sure all methods finished  to run the app
   SimpleBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
+
+
+   if(Platform.isWindows)
+  await DesktopWindow.setMinWindowSize(Size(500,650));
 
   DioHelper.init();
   await CacheHelper.init();
@@ -64,7 +72,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 themeMode:  AppCubit.get(context).isDarkMode ? ThemeMode.dark: ThemeMode.light,
-            home: const NewsLayout(),
+            home:NewsLayout(),
             theme: MyTheme.lightTheme,
             darkTheme: MyTheme.darkTheme,
                  builder: BotToastInit(),
