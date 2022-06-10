@@ -1,3 +1,3 @@
 
-## Todo app
-# Responsive build
+# Todo app
+## Responsive build
