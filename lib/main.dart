@@ -11,6 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new1/shared/cubit/cubit.dart';
 import 'package:new1/shared/cubit/states.dart';
 
+
 import 'layout/newsapp/cubit/cubit.dart';
 import 'layout/newsapp/newslayout.dart';
 

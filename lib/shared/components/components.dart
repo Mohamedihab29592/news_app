@@ -4,6 +4,9 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:new1/layout/newsapp/cubit/cubit.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../modules/news_app/webview/webview.dart';
 
 
 Widget defaultButton({
@@ -135,12 +138,13 @@ Widget myDivider() => Padding(
 Widget buildArticleItem(article, context,index) =>
     Container(
       color:NewsCubit.get(context).businessSelectedItem == index && NewsCubit.get(context).isDesktop ?Colors.blue[300] : null,
-      child: InkWell(
+       child: InkWell(
         onTap: () {
-          NewsCubit.get(context).selectBussnessItem(index);
-          // navigateTo(
-          //   context,
-          //   webViewScreen(article['url'],),
+         // NewsCubit.get(context).selectBussnessItem(index);
+
+          navigateTo(
+            context,
+             webViewScreen(article['url']));
 
         },
         child: Padding(
