@@ -1,3 +1,3 @@
 
-# Todo app
+# News app
 ## Responsive build
