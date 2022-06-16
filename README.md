@@ -1,0 +1,3 @@
+
+# News app
+## Responsive build
